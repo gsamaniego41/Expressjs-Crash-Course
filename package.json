@@ -5,7 +5,14 @@
   "repository": "https://github.com/gsamaniego41/Expressjs-Crash-Course.git",
   "author": "Gabriel Samaniego <selfdev.gs@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
   "dependencies": {
     "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
   }
 }

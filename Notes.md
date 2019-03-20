@@ -8,8 +8,11 @@
 
 - they're just functions that have access to `req` and `res`
 - Express has built in MW. MW also comes from 3rd part pkgs. Custom MW.
+- A stack of functions that executes whenever a request is made to the server.
 - What they can do:
   - Execute any code
   - Make changes to the req/res obj
   - End response cycle
   - Call next MW in the stack
+
+`npm init -y` -y so I don't have to answer any questions
