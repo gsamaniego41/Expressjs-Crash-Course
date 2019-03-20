@@ -1,8 +1,12 @@
 const express = require("express");
 const path = require("path");
 const members = require("./Members");
-
+const logger = require("./middlware/logger");
 const app = express();
+
+// === Init MW ===
+// in order to use the logger MW,
+app.use(logger);
 
 // Gets all members
 app.get("/api/members", (req, res) => {
