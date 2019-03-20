@@ -1,7 +1,6 @@
 {
-  "name": "expressjs",
+  "name": "Expressjs-Crash-Course",
   "version": "1.0.0",
-  "description": "traversy media crash course",
   "main": "index.js",
   "repository": "https://github.com/gsamaniego41/Expressjs-Crash-Course.git",
   "author": "Gabriel Samaniego <selfdev.gs@gmail.com>",
