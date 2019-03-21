@@ -39,4 +39,24 @@ router.post("/", (req, res) => {
   res.status(200).json(members);
 });
 
+// Update member
+router.put("/:id", (req, res) => {
+  const found = members.some(member => member.id === parseInt(req.params.id));
+
+  if (found) {
+    const updated = req.body;
+    members.forEach(member => {
+      if (member.id === parseInt(req.params.id)) {
+        // if the user only wants to update 1 field:
+        // did the user send an updated name?
+        member.name = updated.name ? updated.name : member.name;
+        // did the user send an updated email?
+        member.email = updated.email ? updated.email : member.email;
+
+        res.status(201).json({msg: "Member was updated", member});
+      }
+    });
+  }
+});
+
 module.exports = router;
