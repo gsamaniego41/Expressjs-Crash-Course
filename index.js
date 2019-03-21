@@ -7,6 +7,11 @@ const app = express();
 // in order to use the logger MW,
 app.use(logger);
 
+// Body Parser MW
+app.use(express.json());
+
+app.use(express.urlencoded({extended: false})); //???
+
 /* === Set a static folder === */
 app.use(express.static(path.join(__dirname, "public")));
 
